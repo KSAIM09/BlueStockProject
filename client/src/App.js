@@ -1,11 +1,21 @@
 
+
+import { HashRouter, Routes, Route } from 'react-router-dom';
+
 import './App.css';
+import Signin from './components/component-2/SignInPage/Signin';
+import HomePage from './HomePage';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Home Page</h1>
-    </div>
+    <>
+      <HashRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />}/>
+          <Route path="/signin" element={<Signin />}/>
+        </Routes>
+      </HashRouter>
+    </>
   );
 }
 
